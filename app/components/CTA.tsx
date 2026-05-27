@@ -1,0 +1,102 @@
+const promises = [
+  {
+    title: "Launch in Days",
+    description: "Get started quickly with guided onboarding",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Local Support",
+    description: "Help in your language, when you need it",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+      </svg>
+    ),
+  },
+  {
+    title: "No Lock-in",
+    description: "Your data is always yours to export",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Fair Pricing",
+    description: "Affordable plans for every farm size",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
+  },
+];
+
+export function CTA() {
+  return (
+    <section id="contact" className="py-24 lg:py-32 bg-forest text-bone">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Centered headline */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight mb-4">
+            Ready to get started?
+          </h2>
+          <p className="text-bone/70 text-lg max-w-2xl mx-auto">
+            Join farmers and cooperatives across India who are transforming their
+            operations with intelligent technology.
+          </p>
+        </div>
+
+        {/* Promise grid - 4 columns */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {promises.map((promise) => (
+            <div key={promise.title} className="text-center">
+              <div className="w-12 h-12 rounded-xl bg-bone/10 flex items-center justify-center mx-auto mb-4">
+                {promise.icon}
+              </div>
+              <h3 className="font-semibold mb-1">{promise.title}</h3>
+              <p className="text-bone/60 text-sm">{promise.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="mailto:contact@metamersist.com"
+            className="group inline-flex items-center gap-3 rounded-full bg-amber px-6 py-3.5 text-base font-medium text-charcoal transition-all duration-500 hover:bg-amber-dark active:scale-[0.98]"
+            style={{ transitionTimingFunction: "var(--ease-smooth)" }}
+          >
+            Get in Touch
+            <span className="w-7 h-7 rounded-full bg-charcoal/10 flex items-center justify-center transition-transform duration-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>
+            </span>
+          </a>
+          <a
+            href="#solutions"
+            className="inline-flex items-center justify-center rounded-full border border-bone/30 px-6 py-3.5 text-base font-medium transition-colors duration-300 hover:bg-bone/10"
+          >
+            Explore Solutions
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
