@@ -67,7 +67,7 @@ export function Hero() {
         </div>
 
         {/* Subheading */}
-        <p className="text-text-muted text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-text-muted text-lg sm:text-xl font-medium leading-relaxed max-w-2xl mx-auto mb-6">
           Bring all your farm data into one place — and instantly turn it into
           insights, forecasts, and answers when you need them.
         </p>
@@ -77,7 +77,7 @@ export function Hero() {
           {/* Primary CTA - Solid sky blue */}
           <a
             href="#demo"
-            className="inline-flex items-center justify-center rounded-full bg-sky px-7 py-3.5 text-base font-medium text-white transition-all duration-300 hover:bg-sky-light active:scale-[0.98]"
+            className="inline-flex items-center justify-center rounded-full bg-sky px-6 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-sky-light active:scale-[0.98]"
           >
             Book a demo
           </a>
@@ -85,7 +85,7 @@ export function Hero() {
           {/* Secondary CTA - Outlined */}
           <a
             href="#try"
-            className="inline-flex items-center justify-center rounded-full border-2 border-sky px-7 py-3.5 text-base font-medium text-sky transition-all duration-300 hover:bg-sky/5"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-lg font-semibold text-sky transition-all duration-300 bg-sky/10"
           >
             Try for free
           </a>

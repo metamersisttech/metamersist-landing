@@ -58,7 +58,7 @@ html {
 :root {
   /* Custom easing curves (not Tailwind utilities) */
   --ease-smooth: cubic-bezier(0.32, 0.72, 0, 1);
-  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.1, .5, 0.1, 1);
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -70,7 +70,9 @@ body {
 
 /* Override Tailwind's automatic dark mode */
 @media (prefers-color-scheme: dark) {
-  html, body {
+
+  html,
+  body {
     background-color: #ffffff !important;
     color: #0a0a0a !important;
   }
@@ -112,11 +114,25 @@ body {
 }
 
 /* Staggered animation delays */
-.stagger-1 { transition-delay: 50ms; }
-.stagger-2 { transition-delay: 100ms; }
-.stagger-3 { transition-delay: 150ms; }
-.stagger-4 { transition-delay: 200ms; }
-.stagger-5 { transition-delay: 250ms; }
+.stagger-1 {
+  transition-delay: 50ms;
+}
+
+.stagger-2 {
+  transition-delay: 100ms;
+}
+
+.stagger-3 {
+  transition-delay: 150ms;
+}
+
+.stagger-4 {
+  transition-delay: 200ms;
+}
+
+.stagger-5 {
+  transition-delay: 250ms;
+}
 
 /* Glass morphism for nav */
 .glass {
@@ -135,8 +151,16 @@ body {
 
 /* Typewriter cursor animation */
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .cursor-blink::after {
@@ -151,6 +175,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -163,6 +188,7 @@ body {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
