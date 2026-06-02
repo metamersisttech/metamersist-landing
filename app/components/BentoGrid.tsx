@@ -50,24 +50,24 @@ function BentoCard({
 
 export function BentoGrid({ cards }: BentoGridProps) {
   return (
-    <div className="h-[200dvh] max-w-5xl w-full pt-12">
-      <div className="grid grid-cols-2 gap-6 h-full">
+    <div className="h-auto md:h-[200dvh] max-w-5xl w-full pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
         {/* Column 1: 40% / 60% */}
         <div className="flex flex-col gap-6 h-full">
-          <div className="h-[40%]">
+          <div className="min-h-[60vh] md:min-h-0 md:h-[40%]">
             <BentoCard {...cards[0]} />
           </div>
-          <div className="h-[60%]">
+          <div className="min-h-[60vh] md:min-h-0 md:h-[60%]">
             <BentoCard {...cards[1]} />
           </div>
         </div>
 
         {/* Column 2: 60% / 40% (inverse) */}
         <div className="flex flex-col gap-6 h-full">
-          <div className="h-[60%]">
+          <div className="min-h-[60vh] md:min-h-0 md:h-[60%]">
             <BentoCard {...cards[2]} />
           </div>
-          <div className="h-[40%]">
+          <div className="min-h-[60vh] md:min-h-0 md:h-[40%]">
             <BentoCard {...cards[3]} />
           </div>
         </div>
