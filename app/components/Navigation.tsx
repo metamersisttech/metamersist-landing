@@ -30,12 +30,12 @@ export function Navigation() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 pt-4">
+      <header className="relative md:fixed top-0 left-0 right-0 z-50 pt-4">
         {/* Before scroll: Full-width layout */}
         <nav
           className={`
-            mx-auto w-full py-3 transition-all duration-500
-            ${scrolled ? "transition-all duration-500 max-w-3xl glass rounded-xl px-3 shadow-lg ring-1 ring-foreground/5" : "max-w-[95%] opacity-100"}
+            mx-auto w-full py-3 max-w-[95%] md:transition-all md:duration-500
+            ${scrolled ? "md:max-w-3xl glass md:rounded-xl md:shadow-lg md:ring-1 md:ring-foreground/5 md:px-3" : ""}
           `}
           style={{ transitionTimingFunction: "var(--ease-bounce)" }}
         >

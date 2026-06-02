@@ -21,7 +21,7 @@ function AnimatedWord() {
 
   return (
     <span
-      className={`gradient-text inline-block transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
+      className={`text-sky inline-block transition-all duration-300 ${isAnimating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
         }`}
     >
       {hero.rotatingWords[currentIndex]}
@@ -31,7 +31,7 @@ function AnimatedWord() {
 
 export function Hero() {
   return (
-    <section className="min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-12">
+    <section className="min-h-[100dvh] flex flex-col items-center justify-center md:pt-24 pb-12">
       <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center py-8">
         {/* Announcement Badge */}
         <div className="mb-8 flex justify-center">

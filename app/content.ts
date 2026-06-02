@@ -33,7 +33,7 @@ export const hero = {
   headline: "Technology that transforms.",
   rotatingWords: ["Agriculture.", "Communities.", "Lives.", "Tomorrow."],
   subheading:
-    "We build intelligent platforms that empower people — from farmers in rural fields to enterprises navigating compliance. Purpose-driven. AI-powered. Human-centered.",
+    "Intelligent platforms that empower farmers and enterprises. Purpose-driven. AI-powered. Human-centered.",
   primaryCta: { label: "Explore Solutions", href: "#solutions" },
   secondaryCta: { label: "Contact Us", href: "#contact" },
   dashboard: {
