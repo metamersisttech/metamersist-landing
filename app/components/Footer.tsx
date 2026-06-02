@@ -16,7 +16,7 @@ export function Footer() {
           </div>
 
           {/* Links columns */}
-          <div className="flex gap-8 sm:gap-16 lg:gap-24">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-16 lg:gap-24">
             {footer.linkColumns.map((column, columnIndex) => (
               <ul key={columnIndex} className="space-y-4">
                 {column.map((link) => (

@@ -32,7 +32,7 @@ function AnimatedWord() {
 export function Hero() {
   return (
     <section className="min-h-[100dvh] flex flex-col items-center justify-center pt-24 pb-12">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center py-8">
         {/* Announcement Badge */}
         <div className="mb-8 flex justify-center">
           <a

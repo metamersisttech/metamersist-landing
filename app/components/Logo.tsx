@@ -1,11 +1,19 @@
+import Image from "next/image";
+
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      {/* Placeholder logo - replace with actual logo */}
-      <div className="h-8 w-8 rounded-lg bg-forest flex items-center justify-center">
-        <span className="text-bone font-semibold text-sm">M</span>
+      <Image
+        src="/images/logometamersist.svg"
+        alt="MetaMersist"
+        width={32}
+        height={32}
+        className="h-12 w-12"
+      />
+      <div className="flex flex-col">
+        <span className="font-semibold text-base tracking-tight">Metamersist</span>
+        <span className="font-semibold text-gray-500 text-base tracking-tight">Technologies</span>
       </div>
-      <span className="font-semibold text-lg tracking-tight">Metamersist</span>
     </div>
   );
 }
