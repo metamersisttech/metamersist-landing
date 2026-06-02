@@ -89,46 +89,144 @@ export function Hero() {
       {/* Dashboard Preview - Pink container */}
       <div className="mx-auto w-full max-w-[95%] h-[70vh] sm:h-[80vh] lg:h-[90vh]">
         <div className="bg-rose h-full rounded-3xl p-4 sm:p-6 lg:p-8">
-          {/* White card inside */}
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-            {/* Mock dashboard UI */}
-            <div className="p-4 sm:p-6">
-              {/* Dashboard header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-sky/10 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-sky" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          {/* White card inside - Feedled-style dashboard */}
+          <div className="bg-white rounded-2xl shadow-sm overflow-hidden h-full flex flex-col">
+            {/* Window chrome */}
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
+              <div className="w-3 h-3 rounded-full bg-red-400" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400" />
+              <div className="w-3 h-3 rounded-full bg-green-400" />
+            </div>
+
+            {/* Main content area */}
+            <div className="flex flex-1 min-h-0">
+              {/* Sidebar - hidden on mobile */}
+              <div className="hidden md:flex flex-col w-48 lg:w-56 bg-gray-50 border-r border-gray-100 p-4">
+                {/* Logo */}
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-8 h-8 rounded-lg bg-sky flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
+                  <span className="font-semibold text-gray-900">MetaMersist</span>
+                </div>
+
+                {/* Nav items */}
+                <nav className="space-y-1">
+                  <div className="flex items-center gap-3 px-3 py-2 rounded-lg bg-sky/10 text-sky font-medium">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    <span className="text-sm">Products</span>
+                  </div>
+                  <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    <span className="text-sm">Analytics</span>
+                  </div>
+                  <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <span className="text-sm">Users</span>
+                  </div>
+                  <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-sm">Settings</span>
+                  </div>
+                </nav>
+              </div>
+
+              {/* Main content */}
+              <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-gray-100">
                   <div>
-                    <p className="text-sm font-medium text-gray-900">{hero.dashboard.title}</p>
-                    <p className="text-xs text-gray-500">{hero.dashboard.subtitle}</p>
+                    <h2 className="text-lg font-semibold text-gray-900">Products</h2>
+                    <p className="text-sm text-gray-500">4 products · 2.4K+ users · All active</p>
+                  </div>
+                  <button className="hidden sm:flex items-center gap-2 px-4 py-2 bg-sky text-white text-sm font-medium rounded-lg hover:bg-sky-600 transition-colors">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                    New Product
+                  </button>
+                </div>
+
+                {/* Product cards */}
+                <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+                  {/* FarmerApp */}
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="font-semibold text-gray-900">FarmerApp</h3>
+                        <span className="px-2 py-0.5 text-xs font-medium bg-green-100 text-green-700 rounded-full">Live</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mb-2">2,400+ active farmers across Maharashtra</p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-1 text-xs bg-sky/10 text-sky rounded-full">Marketplace</span>
+                        <span className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">AI</span>
+                        <span className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">Live</span>
+                      </div>
+                    </div>
+                    <div className="hidden sm:flex flex-col items-end ml-4">
+                      <div className="text-2xl font-bold text-gray-900">92</div>
+                      <div className="text-xs text-green-600 font-medium">↑42%</div>
+                      <button className="mt-2 text-sm text-sky font-medium hover:underline">View →</button>
+                    </div>
+                  </div>
+
+                  {/* Flyr */}
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="font-semibold text-gray-900">Flyr</h3>
+                        <span className="px-2 py-0.5 text-xs font-medium bg-amber-100 text-amber-700 rounded-full">Soon</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mb-2">Social connection platform for communities</p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">Social</span>
+                        <span className="px-2 py-1 text-xs bg-orange-100 text-orange-700 rounded-full">Events</span>
+                      </div>
+                    </div>
+                    <div className="hidden sm:flex flex-col items-end ml-4">
+                      <div className="text-2xl font-bold text-gray-900">74</div>
+                      <div className="text-xs text-green-600 font-medium">↑18%</div>
+                      <span className="mt-2 text-sm text-amber-600 font-medium">Coming Soon</span>
+                    </div>
+                  </div>
+
+                  {/* AI Lawyer */}
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="font-semibold text-gray-900">AI Lawyer</h3>
+                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-100 text-blue-700 rounded-full">Beta</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mb-2">Legal guidance accessible for everyone</p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-1 text-xs bg-indigo-100 text-indigo-700 rounded-full">Legal</span>
+                        <span className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">AI</span>
+                      </div>
+                    </div>
+                    <div className="hidden sm:flex flex-col items-end ml-4">
+                      <div className="text-2xl font-bold text-gray-900">61</div>
+                      <div className="text-xs text-green-600 font-medium">↑6%</div>
+                      <span className="mt-2 text-sm text-blue-600 font-medium">Beta Access</span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">Live</span>
+
+                {/* Status bar */}
+                <div className="flex items-center gap-2 px-4 sm:px-6 py-3 border-t border-gray-100 bg-gray-50">
+                  <div className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="text-xs text-gray-600">All systems operational</span>
                 </div>
-              </div>
-
-              {/* Dashboard content grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                {hero.dashboard.metrics.map((metric) => (
-                  <div key={metric.label} className="p-3 bg-gray-50 rounded-xl">
-                    <p className="text-xs text-gray-500 mb-1">{metric.label}</p>
-                    <p className="text-lg font-semibold text-gray-900">{metric.value}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Chart placeholder */}
-              <div className="h-32 sm:h-40 bg-gradient-to-r from-sky/5 via-sky/10 to-sky/5 rounded-xl flex items-end justify-around px-4 pb-4">
-                <div className="w-6 sm:w-8 bg-sky/30 rounded-t" style={{ height: '40%' }} />
-                <div className="w-6 sm:w-8 bg-sky/40 rounded-t" style={{ height: '60%' }} />
-                <div className="w-6 sm:w-8 bg-sky/50 rounded-t" style={{ height: '45%' }} />
-                <div className="w-6 sm:w-8 bg-sky/60 rounded-t" style={{ height: '80%' }} />
-                <div className="w-6 sm:w-8 bg-sky/70 rounded-t" style={{ height: '65%' }} />
-                <div className="w-6 sm:w-8 bg-sky rounded-t" style={{ height: '90%' }} />
               </div>
             </div>
           </div>
