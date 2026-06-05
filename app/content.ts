@@ -153,7 +153,7 @@ export const footer = {
   tagline: "Technology for impact.",
   linkColumns: [
     [
-      { label: "Solutions", href: "#solutions" },
+      { label: "FarmerApp", href: "/farmerapp/privacy-policy" },
       { label: "About Us", href: "#about" },
       { label: "Contact", href: "#contact" },
     ],
